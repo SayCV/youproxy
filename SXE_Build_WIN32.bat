@@ -215,7 +215,12 @@ set REQUIRED_JVM_ARGS="-Didea.updates.url=http://dl.google.com/android/studio/pa
 
 cd WIN32
 make
-pause
+cd ..
+
+if "%errorlevel%"=="0" ( 
+	cp -rf WIN32/YouProxy.exe .
+	cp -rf WIN32/posixthread/dll/x86/pthreadGC2.dll .
+)
 
 REM ##############################
 REM End ...
